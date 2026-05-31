@@ -1,2 +1,2 @@
-# cli
+# devlog
 creating a cli in rust
