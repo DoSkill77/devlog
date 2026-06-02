@@ -1,0 +1,36 @@
+
+use clap::{Parser, Subcommand};
+
+#[derive(Parser)]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    Add {
+        message: String,
+        #[arg(long)]
+        tag: Option<String>,
+    },
+    Today,
+    List,
+}use clap::{Parser, Subcommand};
+
+#[derive(Parser)]
+struct Cli {
+    #[command(subcommand)]
+    command: Commands,
+}
+
+#[derive(Subcommand)]
+enum Commands {
+    Add {
+        message: String,
+        #[arg(long)]
+        tag: Option<String>,
+    },
+    Today,
+    List,
+}
